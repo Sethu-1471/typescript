@@ -1,0 +1,15 @@
+import * as React from "react";
+
+class TestApp extends React.Component<AppProps, AppState> {
+    private linkRef: React.RefObject<HTMLInputElement>;
+    constructor(props) {
+        super(props);
+        this.linkRef = React.createRef();
+    }
+    render() {
+        return(
+        <div ref={this.linkRef}>//Codes</div>
+        <div target={this.linkRef}>//The content which i shere is bind with div of above</div>
+        )
+    }
+}
